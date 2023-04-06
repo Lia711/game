@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Fasthand&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    font-family: "Balthazar";
+    background-color: rgb(100, 127, 237);
+}
+
+.content-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        font-size: 85px;
+        color:white;
+        text-shadow: 0 0 3px gray, 0 0 3px gray, 0 0 3px gray, 0 0 3px gray;
+        width:50%;
+        text-align:center;
+        line-height: 1.1;
+        margin-top:2.5%;
+    }
+
+    .logo {
+        width:18%;
+        margin-top:2.5%;
+        margin-bottom:4%;
+    }
+
+    .start {
+        width:380px;
+        height:70px;
+        font-size: 40px;
+        color:white;
+        background-color: #6158ac;
+        border: 4px solid black;
+        border-radius: 10px;
+        margin-bottom:3%;
+        text-shadow: 0 0 3px gray, 0 0 3px gray, 0 0 3px gray, 0 0 3px gray,
+    }
+}
