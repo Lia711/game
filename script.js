@@ -1,13 +1,23 @@
-//import questionArray from "./questions.js"
-//const questionContainer=document.querySelector(".question-container")
+import { questionArray } from "./questions.js"
+let questionBox;
+let answersBox;
 
 const startButton=document.querySelector(".start")
 
 const switchPage = () => {
     window.location.href="./index2.html"
+    
+    questionBox=document.querySelector(".question");
+    answersBox=document.querySelectorAll(".answer");
+    console.log(questionBox)
+    renderQuestion();
+    renderAnswers();
 }
 
-startButton.addEventListener("click", switchPage)
+if (startButton!==null) {
+    startButton.addEventListener("click", switchPage)
+}
+
 
 /*
 const renderQuestion = (questionObject) => {
@@ -23,7 +33,21 @@ const renderQuestion = (questionObject) => {
 </div>`
 }
 
+
 questionArray.forEach((question)=> {
-    questionContainer.innerHTML=renderQuestion(question)
+    questionBox.innerHTML=renderQuestion(question)
 })
 */
+
+const renderQuestion = () => {
+    questionBox.innerHTML=questionArray[0].text
+}
+
+
+const renderAnswers = () => {
+    answersBox[0].innerHTML=questionArray.answer1;
+    answersBox[1].innerHTML=questionArray.answer2;
+    answersBox[2].innerHTML=questionArray.answer3;
+    answersBox[3].innerHTML=questionArray.answer4;
+}
+
