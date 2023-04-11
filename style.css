@@ -110,7 +110,7 @@
   padding-top: 10px;
   padding-left: 5px;
   padding-right: 5px;
-  margin-top: 5%;
+  margin-top: 3.5%;
   font-weight: lighter;
   box-shadow: 5px 5px #2d254f;
   text-shadow: 0 0 3px gray, 0 0 3px gray, 0 0 3px gray, 0 0 3px gray;
@@ -120,7 +120,7 @@
   margin-top: 3%;
 }
 .content-container-2 .answer-buttons {
-  margin-top: 3%;
+  margin-top: 2%;
   display: grid;
   grid-template-columns: 500px 500px;
   grid-template-rows: 70px 70px;
@@ -136,4 +136,20 @@
   font-size: 30px;
   box-shadow: 4px 4px #2d254f;
   text-shadow: 0 0 3px gray, 0 0 3px gray, 0 0 3px gray, 0 0 3px gray;
+}
+.content-container-2 .next {
+  width: 15%;
+  height: 45px;
+  font-size: 20px;
+  margin-top: 2%;
+  border: 3px solid #2d254f;
+  text-align: center;
+  border-radius: 10px;
+  color: #1a1531;
+  background-color: #a49bc6;
+  padding: 5px;
+  font-size: 30px;
+  font-weight: bolder;
+  box-shadow: 2px 2px #2d254f;
+  text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
 }/*# sourceMappingURL=style.css.map */
