@@ -1,15 +1,16 @@
 import { questionArray } from "./questions.js"
+const contentContainer=document.querySelector(".content-container")
+const contentContainer2=document.querySelector(".content-container-2")
 let questionBox;
 let answersBox;
-
+contentContainer2.style.display="none";
 const startButton=document.querySelector(".start")
 
 const switchPage = () => {
-    window.location.href="./index2.html"
-    
+    contentContainer.style.display="none";
+    contentContainer2.style.display="block";
     questionBox=document.querySelector(".question");
     answersBox=document.querySelectorAll(".answer");
-    console.log(questionBox)
     renderQuestion();
     renderAnswers();
 }
@@ -17,27 +18,6 @@ const switchPage = () => {
 if (startButton!==null) {
     startButton.addEventListener("click", switchPage)
 }
-
-
-/*
-const renderQuestion = (questionObject) => {
-    const {text, answer1, answer2, answer3, answer4} = questionObject
-    return `<div class="question-container">
-    <h1 class="question">${text}</h1>
-    <div class="answer-buttons">
-        <button class="answer">${answer1}</button>
-        <button class="answer">${answer2}</button>
-        <button class="answer">${answer3}</button>
-        <button class="answer">${answer4}</button>
-    </div>  
-</div>`
-}
-
-
-questionArray.forEach((question)=> {
-    questionBox.innerHTML=renderQuestion(question)
-})
-*/
 
 const renderQuestion = () => {
     questionBox.innerHTML=questionArray[0].text
