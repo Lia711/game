@@ -23,13 +23,26 @@ if (startButton!==null) {
 }
 
 const renderQuestion = () => {
-    questionBox.innerHTML=questionArray[0].text
+        questionBox.innerHTML=questionArray[0].text
+    
 }
-
 const renderAnswers = () => {
     answersBox[0].innerHTML=questionArray[0].answer1;
     answersBox[1].innerHTML=questionArray[0].answer2;
     answersBox[2].innerHTML=questionArray[0].answer3;
     answersBox[3].innerHTML=questionArray[0].answer4;
 }
+
+const handleAnswer = (event) => {
+    const answer = event.target
+    if (answer.innerHTML==questionArray[0].correct) {
+        answer.style.backgroundColor="green";
+    } else {
+        answer.style.backgroundColor="red";
+    }
+}
+
+answersBox.forEach((button)=> {
+    button.addEventListener("click", handleAnswer);
+})
 

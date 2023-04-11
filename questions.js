@@ -5,7 +5,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer2"
+    correct: "A2"
   },
   {
     text: "Q2",
@@ -13,7 +13,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer1"
+    correct: "A1"
   },
   {
     text: "Q3",
@@ -21,7 +21,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer2"
+    correct: "A2"
   },
   {
     text: "Q4",
@@ -29,7 +29,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer3"
+    correct: "A3"
   },
   {
     text: "Q5",
@@ -37,7 +37,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer2"
+    correct: "A2"
   },
   {
     text: "Q6",
@@ -45,7 +45,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer4"
+    correct: "A4"
   },
   {
     text: "Q7",
@@ -53,7 +53,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer4"
+    correct: "A4"
   },
   {
     text: "Q8",
@@ -61,7 +61,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer1"
+    correct: "A1"
   },
       {
     text: "Q9",
@@ -69,7 +69,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct:"answer3"
+    correct:"A3"
   },
   {
     text: "Q10",
@@ -77,7 +77,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer1"
+    correct: "A1"
   },
   {
     text: "Q11",
@@ -85,7 +85,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer2"
+    correct: "A2"
   },
   {
     text: "Q12",
@@ -93,7 +93,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer4"
+    correct: "A4"
   },
   {
     text: "Q13",
@@ -101,7 +101,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct:"answer2"
+    correct:"A2"
   },
   {
     text: "Q14",
@@ -109,7 +109,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer2"
+    correct: "A2"
   },
   {
     text: "Q15",
@@ -117,7 +117,7 @@ export const questionArray = [
     answer2: "A2",
     answer3: "A3",
     answer4: "A4",
-    correct: "answer3"
+    correct: "A3"
   }];
 
   export default questionArray;
