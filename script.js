@@ -28,9 +28,9 @@ if (startButton!==null) {
     startButton.addEventListener("click", switchPage)
 }
 
+//render questions and answers
 const renderQuestion = () => {
-        questionBox.innerHTML=questionArray[questionCount].text
-    
+        questionBox.innerHTML=questionArray[questionCount].text   
 }
 const renderAnswers = () => {
     answersBox[0].innerHTML=questionArray[questionCount].answer1;
@@ -42,6 +42,7 @@ const renderAnswers = () => {
     })
 }
 
+//when answer is clicked
 const handleAnswer = (event) => {
     const answer = event.target
     if (answer.innerHTML==questionArray[questionCount].correct) {
@@ -53,19 +54,23 @@ const handleAnswer = (event) => {
     answersBox.forEach((answer)=> {
         answer.removeEventListener("click", handleAnswer)
     })
+    nextButton.addEventListener("click", handleNext)
 }
 
-
-
-const handleSkip = () => {
+//lifeline: skip question
+const handleSkip = (event) => {
     questionCount++;
-    lifelineButton[2].style.backgroundColor="gray";
+    event.target.style.backgroundColor="gray";
+    event.target.removeEventListener("click", handleSkip)
     renderQuestion();
     renderAnswers();
 }
-
+lifelineButton[0].addEventListener("click", handleSkip)
+lifelineButton[1].addEventListener("click", handleSkip)
 lifelineButton[2].addEventListener("click", handleSkip)
 
+
+//next question
 const handleNext = () => {
     questionCount++;
     renderQuestion();
@@ -73,12 +78,12 @@ const handleNext = () => {
     answersBox.forEach((answer)=> {
         answer.style.backgroundColor="#6158ac";
     })
+    nextButton.removeEventListener("click", handleNext);
 }
-
 nextButton.addEventListener("click", handleNext)
 
+//money calculation
 const countMoney = () => {
-    
     switch(questionCount) {
         case 0:
             moneyAdded+=100;
@@ -129,10 +134,5 @@ const countMoney = () => {
 }
 
 //fix styling for small screen width
-//fix answer colors
 //make endgame
-//implement other lifelines
-//cannot click more than one button per question
-//fix money calculations
-
 
