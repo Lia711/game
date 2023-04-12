@@ -10,6 +10,7 @@ const nextButton=document.querySelector(".next")
 const moneyDisplay=document.querySelector(".money")
 
 let questionCount = 0
+let moneyAdded=0
 
 //on load question box is hidden
 contentContainer2.style.display="none";
@@ -36,6 +37,9 @@ const renderAnswers = () => {
     answersBox[1].innerHTML=questionArray[questionCount].answer2;
     answersBox[2].innerHTML=questionArray[questionCount].answer3;
     answersBox[3].innerHTML=questionArray[questionCount].answer4;
+    answersBox.forEach((button)=> {
+        button.addEventListener("click", handleAnswer);
+    })
 }
 
 const handleAnswer = (event) => {
@@ -46,11 +50,12 @@ const handleAnswer = (event) => {
     } else {
         answer.style.backgroundColor="red";
     }
+    answersBox.forEach((answer)=> {
+        answer.removeEventListener("click", handleAnswer)
+    })
 }
 
-answersBox.forEach((button)=> {
-    button.addEventListener("click", handleAnswer);
-})
+
 
 const handleSkip = () => {
     questionCount++;
@@ -65,12 +70,15 @@ const handleNext = () => {
     questionCount++;
     renderQuestion();
     renderAnswers();
+    answersBox.forEach((answer)=> {
+        answer.style.backgroundColor="#6158ac";
+    })
 }
 
 nextButton.addEventListener("click", handleNext)
 
 const countMoney = () => {
-    let moneyAdded=0
+    
     switch(questionCount) {
         case 0:
             moneyAdded+=100;
