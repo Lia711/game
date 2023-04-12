@@ -53,6 +53,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: auto;
 }
 .content-container-2 .top-page .lifelines {
   display: flex;
@@ -92,6 +93,7 @@
 .content-container-2 .top-page h3 {
   font-size: 45px;
   font-weight: bold;
+  width: 20%;
   text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
 }
 .content-container-2 .question-container {
