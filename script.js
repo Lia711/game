@@ -72,15 +72,30 @@ lifelineButton[2].addEventListener("click", handleSkip)
 
 //next question
 const handleNext = () => {
-    questionCount++;
-    renderQuestion();
-    renderAnswers();
-    answersBox.forEach((answer)=> {
+    if (questionCount<14) {
+        questionCount++;
+        renderQuestion();
+        renderAnswers();
+        answersBox.forEach((answer)=> {
         answer.style.backgroundColor="#6158ac";
     })
     nextButton.removeEventListener("click", handleNext);
+    } else {
+        handleEndGame();
+    }
 }
 nextButton.addEventListener("click", handleNext)
+
+//happens after last question
+const handleEndGame = () => {
+    if (moneyAdded==0) {
+        questionBox.innerHTML=`Uh oh! Seems like you need to study more Astronomy!`
+    } else if (moneyAdded>0&&moneyAdded<1000000) {
+        questionBox.innerHTML=`Congratulations! You've finished the game and won £${moneyAdded}!`
+    } else if (moneyAdded==1000000) {
+        questionBox.innerHTML=`Congratulations! You've successfully become a millionaire!`
+    }
+}
 
 //money calculation
 const countMoney = () => {
