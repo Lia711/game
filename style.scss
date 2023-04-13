@@ -98,6 +98,8 @@
 
         .logo-2 {
             margin-left: 90px;
+            width:17%;
+            margin-top:3%;
         }
 
         h3 {
@@ -131,11 +133,7 @@
         text-shadow: 0 0 3px gray, 0 0 3px gray, 0 0 3px gray, 0 0 3px gray,
     }
 
-    .logo-2 {
-        width:17%;
-        margin-top:3%;
-    }
-
+    
     .answer-buttons {
         margin-top:2%;
         display:grid;
@@ -171,5 +169,31 @@
         font-weight: bolder;
         box-shadow:2px 2px #2d254f;
         text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white,
+    }
+}
+
+.endgame {
+    display: flex;
+    justify-content: center;
+    .final {
+        display: flex;
+        margin-left:25%;
+        justify-content: center;
+        margin-top:12%;
+        width:50%;
+        height:100px;
+        border:3px solid #2d254f;
+        text-align:center;
+        border-radius: 10px;
+        color:white;
+        background-color:#6158ac;
+        padding-top:10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size:45px;
+        font-weight:lighter;
+        box-shadow:5px 5px #2d254f;
+        text-shadow: 0 0 3px gray, 0 0 3px gray, 0 0 3px gray, 0 0 3px gray,
+
     }
 }

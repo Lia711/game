@@ -1,7 +1,10 @@
 import { questionArray } from "./questions.js"
+//import confetti from "./node_modules/canvas-confetti"
 
 const contentContainer=document.querySelector(".content-container")
 const contentContainer2=document.querySelector(".content-container-2")
+const endPage=document.querySelector(".endgame")
+const endBox=document.querySelector(".final")
 const startButton=document.querySelector(".start")
 const questionBox=document.querySelector(".question");
 const answersBox=document.querySelectorAll(".answer");
@@ -12,8 +15,10 @@ const moneyDisplay=document.querySelector(".money")
 let questionCount = 0
 let moneyAdded=0
 
-//on load question box is hidden
+//on load question box and endgame is hidden
+//contentContainer.style.display="none"
 contentContainer2.style.display="none";
+endPage.style.display="none"
 
 //load questions; hide start page
 const switchPage = () => {
@@ -88,14 +93,27 @@ nextButton.addEventListener("click", handleNext)
 
 //happens after last question
 const handleEndGame = () => {
+    contentContainer2.style.display="none";
+    endPage.style.display="block";
     if (moneyAdded==0) {
-        questionBox.innerHTML=`Uh oh! Seems like you need to study more Astronomy!`
+        endBox.innerHTML=`Uh oh! Seems like you need to study more Astronomy!`
     } else if (moneyAdded>0&&moneyAdded<1000000) {
-        questionBox.innerHTML=`Congratulations! You've finished the game and won £${moneyAdded}!`
+        endBox.innerHTML=`Congratulations! You've finished the game and won £${moneyAdded}!`
+        fireConfetti();
     } else if (moneyAdded==1000000) {
-        questionBox.innerHTML=`Congratulations! You've successfully become a millionaire!`
+        endBox.innerHTML=`Congratulations! You've successfully become a millionaire!`
+        fireConfetti();
     }
 }
+
+const fireConfetti = () => {
+    const confettiOptions={
+        spread:800, 
+        particleCount:1000,
+        startVelocity:50
+    };
+    confetti(confettiOptions);
+};
 
 //money calculation
 const countMoney = () => {
@@ -148,6 +166,10 @@ const countMoney = () => {
     moneyDisplay.innerText=`Money Acquired: £${moneyAdded}`
 }
 
+
+function newFunction() {
+    fireConfetti();
+}
 //fix styling for small screen width
 //make endgame
 
