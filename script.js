@@ -151,7 +151,7 @@ const countMoney = () => {
             moneyAdded+=32000;
             break;
         case 11:
-            moneyAdded+=61000;
+            moneyAdded+=60000;
             break;
         case 12:
             moneyAdded+=125000;
@@ -167,9 +167,4 @@ const countMoney = () => {
 }
 
 
-function newFunction() {
-    fireConfetti();
-}
-//fix styling for small screen width
-//make endgame
 

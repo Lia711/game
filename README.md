@@ -16,11 +16,13 @@ Files
 
 Known Issues (Work In Progress)
     -game only displays correctly on laptop monitor width
-    -confetti currently not working
+    -no option to restart as of now
+    -readme file doesn't include screenshots yet and doesn't display correctly on github
 
 Credits
     Game made for non-profit personal use.
     Font: Balthazar from Google Fonts https://fonts.google.com/specimen/Balthazar
     Icon: Who Wants To Be A Millionaire vector (SVG) logo from World Vector Logo: https://worldvectorlogo.com/logo/who-wants-to-be-a-millionaire 
+    Confetti: Canvas Confetti package https://www.npmjs.com/package/canvas-confetti
 
 
