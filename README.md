@@ -4,8 +4,8 @@ Features
     - astronomy themed questions with ascending difficulty
     - three lifelines allowing the player to skip a question
     - green and red indication of whether the chosen answer is correct
-    - money counter: game doesn't end until all questions are completed
-    - goal: answer all questions correctly and earn a million pounds
+    - money counter: become a millionaire or lose your money trying
+    - confetti if you walk away with money
 
 Files
     -index.html containing the elements of the webpage

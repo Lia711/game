@@ -1,5 +1,4 @@
 import { questionArray } from "./questions.js"
-//import confetti from "./node_modules/canvas-confetti"
 
 const contentContainer=document.querySelector(".content-container")
 const contentContainer2=document.querySelector(".content-container-2")
@@ -15,8 +14,7 @@ const moneyDisplay=document.querySelector(".money")
 let questionCount = 0
 let moneyAdded=0
 
-//on load question box and endgame is hidden
-//contentContainer.style.display="none"
+//on load question box and end page is hidden
 contentContainer2.style.display="none";
 endPage.style.display="none"
 
@@ -52,14 +50,16 @@ const handleAnswer = (event) => {
     const answer = event.target
     if (answer.innerHTML==questionArray[questionCount].correct) {
         answer.style.backgroundColor="green";
+        answersBox.forEach((answer)=> {
+            answer.removeEventListener("click", handleAnswer)
+        })
+        nextButton.addEventListener("click", handleNext)
         countMoney();
     } else {
         answer.style.backgroundColor="red";
+        handleEndGame();
     }
-    answersBox.forEach((answer)=> {
-        answer.removeEventListener("click", handleAnswer)
-    })
-    nextButton.addEventListener("click", handleNext)
+    
 }
 
 //lifeline: skip question
@@ -75,7 +75,7 @@ lifelineButton[1].addEventListener("click", handleSkip)
 lifelineButton[2].addEventListener("click", handleSkip)
 
 
-//next question
+//clicking next question
 const handleNext = () => {
     if (questionCount<14) {
         questionCount++;
@@ -91,14 +91,17 @@ const handleNext = () => {
 }
 nextButton.addEventListener("click", handleNext)
 
-//happens after last question
+//happens after last question or wrong answer
 const handleEndGame = () => {
     contentContainer2.style.display="none";
     endPage.style.display="block";
-    if (moneyAdded==0) {
-        endBox.innerHTML=`Uh oh! Seems like you need to study more Astronomy!`
-    } else if (moneyAdded>0&&moneyAdded<1000000) {
-        endBox.innerHTML=`Congratulations! You've finished the game and won £${moneyAdded}!`
+    if (moneyAdded<1000) {
+        endBox.innerHTML=`Uh oh! You've lost all your money, seems like you need to study more Astronomy!`
+    } else if (moneyAdded>=1000&&moneyAdded<32000) {
+        endBox.innerHTML=`Congratulations! You walk away with £1000!`
+        fireConfetti();
+    } else if (moneyAdded>=32000&&moneyAdded<1000000) {
+        endBox.innerHTML=`Congratulations! You walk away with £32000!`
         fireConfetti();
     } else if (moneyAdded==1000000) {
         endBox.innerHTML=`Congratulations! You've successfully become a millionaire!`
