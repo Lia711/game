@@ -31,4 +31,12 @@ Credits
     Icon: Who Wants To Be A Millionaire vector (SVG) logo from World Vector Logo: https://worldvectorlogo.com/logo/who-wants-to-be-a-millionaire 
     Confetti: Canvas Confetti package https://www.npmjs.com/package/canvas-confetti
 
+Screenshots
+
+    ![image](https://github.com/Lia711/game/assets/125596830/42368a1a-e828-48c6-86fb-857b802ebd3e)
+    ![image](https://github.com/Lia711/game/assets/125596830/33701cd6-2e18-4998-819e-5583f41af38e)
+    ![image](https://github.com/Lia711/game/assets/125596830/a5e5b796-5053-4b5d-92ce-a0673de7c897)
+
+
+
 
